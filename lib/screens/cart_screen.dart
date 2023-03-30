@@ -16,7 +16,7 @@ class CartScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Card(
-            margin: EdgeInsets.all(15),
+            margin: EdgeInsets.all(14),
             child: Padding(
               padding: EdgeInsets.all(7),
               child: Row(
@@ -59,6 +59,7 @@ class CartScreen extends StatelessWidget {
               itemCount: cart.items.length,
               itemBuilder: (ctx, i) => CartItem(
                 id: cart.items.values.toList()[i].id,
+                productId: cart.items.keys.toList()[i],
                 title: cart.items.values.toList()[i].title,
                 quantity: cart.items.values.toList()[i].quantity,
                 price: cart.items.values.toList()[i].price,
