@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/screens/cart_screen.dart';
-import 'package:provider/provider.dart';
 
+import '../screens/cart_screen.dart';
+import '../widgets/app_drawer.dart';
+import 'package:provider/provider.dart';
 import '../widgets/products_grid.dart';
 import '../providers/cart.dart';
 import '../widgets/cartBadge.dart';
@@ -19,6 +20,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   Widget build(BuildContext context) {
     // final cart = Provider.of<Cart>(context);
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Text('MyShop'),
         actions: [
